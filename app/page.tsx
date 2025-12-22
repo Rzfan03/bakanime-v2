@@ -6,9 +6,10 @@ import { animeProps } from "./types/animeProps";
 export default async function Home({
   searchParams,
 }: {
-  searchParams: { page?: string };
+  searchParams: Promise<{ page?: string }>;
 }) {
-  const currentPage = Number(searchParams.page) || 1;
+  const resolvedSearchParams = await searchParams;
+  const currentPage = Number(resolvedSearchParams.page) || 1;
 
   const [res, res2] = await Promise.all([
     getAnimeList(currentPage),

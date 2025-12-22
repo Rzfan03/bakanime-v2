@@ -12,37 +12,8 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Bakanime V2 - Streaming Anime Gratis Kualitas Terbaik",
-  description: "Nonton anime subtitle Indonesia gratis dengan koleksi terlengkap dan kualitas video HD terbaik di Bakanime V2.",
-  keywords: "nonton anime, streaming anime, anime sub indo, bakanime, bakanime v2, anime gratis",
-  authors: [{ name: "Bakanime Team" }],
-  openGraph: {
-    title: "Bakanime V2",
-    description: "Website streaming anime gratis dengan kualitas terbaik",
-    url: "https://your-domain.com",
-    icons:{
-
-    },
-    siteName: "Bakanime V2",
-    images: [
-      {
-        url: "/logo.ico",
-        width: 1200,
-        height: 630,
-      },
-    ],
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Bakanime V2",
-    description: "Streaming anime gratis kualitas terbaik",
-    images: ["/og-image.jpg"],
-  },
-  robots: {
-    index: true,
-    follow: true,
-  },
+  title: "Bakanime V2",
+  description: "Website streaming anime gratis dengan kualitas terbaik",
 };
 
 export default function RootLayout({
@@ -51,10 +22,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="id">
+    <html lang="en">
       <link
   rel="icon"
-  href="/logo.ico"
+  href="/icon.ico"
+  type="image/<generated>"
+  sizes="<generated>"
 />
       <head>
         <Script

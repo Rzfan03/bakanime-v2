@@ -20,10 +20,13 @@ export const metadata: Metadata = {
     title: "Bakanime V2",
     description: "Website streaming anime gratis dengan kualitas terbaik",
     url: "https://your-domain.com",
+    icons:{
+
+    },
     siteName: "Bakanime V2",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/logo.ico",
         width: 1200,
         height: 630,
       },
@@ -49,6 +52,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="id">
+      <link
+  rel="icon"
+  href="/logo.ico"
+/>
       <head>
         <Script
           async

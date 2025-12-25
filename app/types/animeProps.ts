@@ -7,6 +7,7 @@ export type animeProps = {
     date: string;
     type: string;
     eps_slug: string;
+    eps_title: string;
     params: Promise<{
     slug: string;
   }>;

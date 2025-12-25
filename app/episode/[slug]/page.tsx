@@ -66,7 +66,7 @@ export default async function WatchAnime({ params }: animeProps) {
           <h2 className="text-lg font-semibold text-gray-400">Semua Episode</h2>
           <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-2 max-h-48 overflow-y-auto pr-2 scrollbar-hide">
             {animeDetails?.episodes ? (
-              animeDetails.episodes.map((ep: any) => (
+              animeDetails.episodes.map((ep:animeProps) => (
                 <Link
                   key={ep.episode}
                   href={`/episode/${ep.eps_slug}`}

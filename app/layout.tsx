@@ -10,70 +10,57 @@ import { dark } from "@clerk/themes";
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
   variable: "--font-jetbrains-mono",
-  display: 'swap',
+  display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: {
-    default: "Bakanime V2 - Nonton Anime Gratis Sub Indo Terlengkap",
-    template: "%s | Bakanime V2",
-  },
-  description: "Bakanime V2 adalah platform streaming anime gratis dengan kualitas video terbaik, update cepat, dan koleksi terlengkap tanpa iklan mengganggu.",
+  title: "Bakanime V2 - Nonton Anime Gratis Sub Indo Terlengkap",
+  description:
+    "Bakanime V2 adalah platform streaming anime gratis dengan kualitas video terbaik, update cepat, dan koleksi terlengkap tanpa iklan mengganggu.",
   keywords: ["nonton anime", "anime sub indo", "streaming anime", "bakanime v2", "anime gratis"],
   authors: [{ name: "rzfann" }],
-  metadataBase: new URL("https://bakaanime.vercel.app"),
-  verification: {
-    google: "oR1vFDbIf-85CemIwzQupghHx1F07kWTM9UCqgzdTG8",
-  },
-  other: {
-    "monetag": "8e4b02809de5f8875a007dbb3cf429f8",
-  },
   openGraph: {
     title: "Bakanime V2 - Nonton Anime Gratis Sub Indo",
     description: "Streaming anime favoritmu dengan kualitas terbaik dan update setiap hari.",
-    url: "https://bakaanime.vercel.app",
+    url: "https://bakanime.vercel.app",
     siteName: "Bakanime V2",
     locale: "id_ID",
     type: "website",
   },
-  icons: {
-    icon: "/logo.ico",
-    shortcut: "/logo.ico",
-    apple: "/logo.ico",
-  },
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <ClerkProvider
       appearance={{
         baseTheme: dark,
         variables: {
-          colorPrimary: '#3b82f6', 
-          colorBackground: '#0a0a0a',
+          colorPrimary: "#3b82f6",
+          colorBackground: "#0a0a0a",
         },
       }}
     >
       <html lang="id" className="scroll-smooth">
-        <head>
+        <body
+          className={`${jetbrainsMono.className} ${jetbrainsMono.variable} bg-[#0a0a0a] text-white antialiased flex flex-col min-h-screen`}
+        >
+          <Navbar />
+
           <Script
             async
             src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
             strategy="afterInteractive"
             crossOrigin="anonymous"
           />
-        </head>
-        <body
-          className={`${jetbrainsMono.className} ${jetbrainsMono.variable} bg-[#0a0a0a] text-white antialiased flex flex-col min-h-screen`}
-        >
-          <Navbar />
-          <main className="flex-grow">
-            {children}
-          </main>
+          <Script
+            async
+            src="https://quge5.com/88/tag.min.js"
+            data-zone="196568"
+            data-cfasync="false"
+            strategy="afterInteractive"
+          />
+
+          <main className="flex-grow">{children}</main>
           <Footer />
         </body>
       </html>

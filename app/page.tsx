@@ -3,6 +3,7 @@ import Image from "next/image";
 import { getAnimeList, getPopularAnime } from "./lib/api";
 import { animeProps } from "./types/animeProps";
 import HistoryList from "@/app/components/Histroy";
+import Ads from "./components/Ads";
 
 export default async function Home() {
   const [res, res2] = await Promise.all([
@@ -12,7 +13,7 @@ export default async function Home() {
 
   return (
     <main className="min-h-screen bg-[#050505] pt-24 pb-20 px-6 max-w-7xl mx-auto text-white">
-      
+      <Ads/>
       <HistoryList />
 
       <section className="mb-16">

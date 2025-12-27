@@ -24,6 +24,10 @@ const nextConfig: NextConfig = {
         protocol: 'https',
         hostname: 'anime-indo.lol',
       },
+      {
+        protocol: 'https',
+        hostname: 'media.tenor.com',
+      },
     ],
   },
 };

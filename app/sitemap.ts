@@ -1,19 +1,33 @@
-import { MetadataRoute } from 'next';
+import { MetadataRoute } from 'next'
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = "https://your-domain.com";
+  const baseUrl = 'https://bakanime-v2.vercel.app'
 
-  const staticRoutes = [
-    "",
-    "/popular",
-    "/movie",
-    "/anime-list",
-  ].map((route) => ({
-    url: `${baseUrl}${route}`,
+  // Ambil data anime dari API kamu
+  const res = await fetch('https://www.sankavollerei.com/anime/stream/anime-list')
+  const { data: animeList } = await res.json()
+
+  // Map data anime menjadi format sitemap
+  const animeEntries = animeList.map((anime: any) => ({
+    url: `${baseUrl}/anime/${anime.slug}`,
     lastModified: new Date(),
-    changeFrequency: 'daily' as const,
-    priority: route === "" ? 1 : 0.8,
-  }));
+    changeFrequency: 'daily',
+    priority: 0.7,
+  }))
 
-  return [...staticRoutes];
+  return [
+    {
+      url: baseUrl,
+      lastModified: new Date(),
+      changeFrequency: 'always',
+      priority: 1,
+    },
+    {
+      url: `${baseUrl}/history`,
+      lastModified: new Date(),
+      changeFrequency: 'daily',
+      priority: 0.5,
+    },
+    ...animeEntries,
+  ]
 }

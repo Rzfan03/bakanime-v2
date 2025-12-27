@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   description: "Bakanime V2 adalah platform streaming anime gratis dengan kualitas video terbaik, update cepat, dan koleksi terlengkap tanpa iklan mengganggu.",
   keywords: ["nonton anime", "anime sub indo", "streaming anime", "bakanime v2", "anime gratis"],
   authors: [{ name: "rzfann" }],
-  metadataBase: new URL("https://bakanime-v2.vercel.app"),
+  metadataBase: new URL("https://bakaanime.vercel.app"),
   verification: {
     google: "oR1vFDbIf-85CemIwzQupghHx1F07kWTM9UCqgzdTG8",
   },

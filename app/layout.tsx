@@ -22,6 +22,9 @@ export const metadata: Metadata = {
   keywords: ["nonton anime", "anime sub indo", "streaming anime", "bakanime v2", "anime gratis"],
   authors: [{ name: "rzfann" }],
   metadataBase: new URL("https://bakanime-v2.vercel.app"),
+  verification: {
+    google: "oR1vFDbIf-85CemIwzQupghHx1F07kWTM9UCqgzdTG8",
+  },
   openGraph: {
     title: "Bakanime V2 - Nonton Anime Gratis Sub Indo",
     description: "Streaming anime favoritmu dengan kualitas terbaik dan update setiap hari.",

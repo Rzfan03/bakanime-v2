@@ -1,3 +1,4 @@
+
 import { animeProps } from "@/app/types/animeProps";
 import Link from "next/link";
 
@@ -25,6 +26,7 @@ export default async function WatchAnime({ params }: animeProps) {
 
   return (
     <main className="min-h-screen bg-[#0a0a0a] text-white pt-20 pb-10 px-4">
+
       <div className="max-w-6xl mx-auto flex flex-col gap-6">
         
         <div className="relative w-full aspect-video bg-black rounded-xl overflow-hidden shadow-2xl border border-white/10">
@@ -87,4 +89,4 @@ export default async function WatchAnime({ params }: animeProps) {
       </div>
     </main>
   );
-}2
+}

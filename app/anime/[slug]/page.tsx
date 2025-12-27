@@ -1,15 +1,25 @@
 import { animeProps } from "@/app/types/animeProps";
 import Image from "next/image";
 import Link from "next/link";
+import HistoryTracker from "@/app/components/Histroy"; 
 
 export default async function watchAnime({ params }: animeProps) {
   const { slug } = await params;
   const res = await fetch(`https://www.sankavollerei.com/anime/stream/anime/${slug}`);
   const { data: anime } = await res.json();
 
+  const historyPayload = {
+    slug: slug,
+    title: anime.title,
+    poster: anime.poster,
+    type: "Anime",
+    episodeTitle: "Lihat Detail", 
+  };
+
   return (
     <main className="relative min-h-screen flex items-center justify-center px-6 overflow-hidden">
-      {/* Background Hero Blur */}
+      <HistoryTracker anime={historyPayload} />
+
       <div className="absolute inset-0 -z-50">
         <Image
           src={anime.poster}
@@ -23,7 +33,6 @@ export default async function watchAnime({ params }: animeProps) {
       </div>
 
       <div className="max-w-5xl w-full flex flex-col md:flex-row items-center gap-10 md:gap-16 z-10">
-        {/* Poster Utama */}
         <div className="flex-shrink-0 relative group">
           <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 to-blue-600 rounded-xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
           <Image
@@ -36,7 +45,6 @@ export default async function watchAnime({ params }: animeProps) {
           />
         </div>
 
-        {/* Info Detail */}
         <div className="flex flex-col text-center md:text-left">
           <h1 className="text-3xl md:text-5xl font-bold tracking-tight text-white mb-4">
             {anime.title}

@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { getMovieList } from "../lib/api";
 import { animeProps } from "../types/animeProps";
+import HistoryTracker from "../components/Histroy";
 
 export default async function MoviePage({
   searchParams,
@@ -32,6 +33,8 @@ export default async function MoviePage({
         </h2>
         <p className="text-gray-400 text-xs mt-2 ml-5">Koleksi film layar lebar terbaik</p>
       </header>
+
+      
 
       <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
         {res.data.map((movie: animeProps) => (

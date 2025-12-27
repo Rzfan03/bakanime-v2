@@ -25,6 +25,9 @@ export const metadata: Metadata = {
   verification: {
     google: "oR1vFDbIf-85CemIwzQupghHx1F07kWTM9UCqgzdTG8",
   },
+  other: {
+    "monetag": "8e4b02809de5f8875a007dbb3cf429f8",
+  },
   openGraph: {
     title: "Bakanime V2 - Nonton Anime Gratis Sub Indo",
     description: "Streaming anime favoritmu dengan kualitas terbaik dan update setiap hari.",
@@ -68,7 +71,9 @@ export default function RootLayout({
           className={`${jetbrainsMono.className} ${jetbrainsMono.variable} bg-[#0a0a0a] text-white antialiased flex flex-col min-h-screen`}
         >
           <Navbar />
+          <main className="flex-grow">
             {children}
+          </main>
           <Footer />
         </body>
       </html>

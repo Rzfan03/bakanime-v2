@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Bakanime V2 - Nonton Anime Gratis Sub Indo",
     description: "Streaming anime favoritmu dengan kualitas terbaik dan update setiap hari.",
-    url: "https://bakanime-v2.vercel.app",
+    url: "https://bakaanime.vercel.app",
     siteName: "Bakanime V2",
     locale: "id_ID",
     type: "website",

@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next'
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = 'https://bakanime-v2.vercel.app'
+  const baseUrl = 'https://bakaanime.vercel.app'
 
   try {
     const res = await fetch('https://www.sankavollerei.com/anime/stream/anime-list', {

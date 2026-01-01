@@ -13,7 +13,7 @@ export default function Footer() {
               BAKA<span className="text-white">NIME</span>
             </Link>
             <p className="mt-4 text-gray-400 text-sm leading-relaxed">
-              Nonton anime subtitle Indonesia terlengkap dengan kualitas tinggi. Update setiap hari hanya di FANNIME.
+              Nonton anime subtitle Indonesia terlengkap dengan kualitas tinggi. Update setiap hari hanya di BAKAANIME
             </p>
           </div>
 
@@ -60,7 +60,7 @@ export default function Footer() {
             © {currentYear} BAKANIME. All rights reserved.
           </p>
           <p className="text-gray-500 text-xs">
-            Dibuat dengan ❤️ oleh FANNIME Team
+            Dibuat dengan ❤️ oleh Rzfan.dev
           </p>
         </div>
       </div>

@@ -66,7 +66,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="fixed top-0 w-full z-[100] bg-black/80 backdrop-blur-xl border-b border-white/10">
+      <nav className={`fixed top-0 w-full z-[100] bg-black/80 backdrop-blur-xl border-b border-white/10`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16 gap-4">
             <div className="flex items-center gap-8">
@@ -136,12 +136,11 @@ export default function Navbar() {
 
             <div className="flex items-center gap-3">
               <SignedOut>
-                <SignInButton mode="modal">
-                  <button className="text-sm font-medium bg-blue-600 hover:bg-blue-500 text-white px-5 py-2 rounded-xl transition-all shadow-lg shadow-blue-500/20">
-                    Login
-                  </button>
-                </SignInButton>
+                <SignedOut>
+                  <Link href={'login'} className="text-sm font-medium bg-blue-600 hover:bg-blue-500 text-white px-5 py-2 rounded-xl transition-all shadow-lg shadow-blue-500/20">Login</Link>
+                </SignedOut>
               </SignedOut>
+                  
 
               <SignedIn>
                 <div className="flex items-center gap-3 bg-white/5 py-1.5 pl-3 pr-1.5 rounded-full border border-white/10">

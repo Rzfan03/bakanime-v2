@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 import Script from "next/script";
 import { ClerkProvider } from "@clerk/nextjs";
 import { dark } from "@clerk/themes";
@@ -51,13 +51,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
             strategy="afterInteractive"
             crossOrigin="anonymous"
-          />
-          <Script
-            async
-            src="https://quge5.com/88/tag.min.js"
-            data-zone="196568"
-            data-cfasync="false"
-            strategy="afterInteractive"
           />
 
           <main className="flex-grow">{children}</main>

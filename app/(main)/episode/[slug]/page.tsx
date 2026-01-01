@@ -1,6 +1,7 @@
 
-import { animeProps } from "@/app/types/animeProps";
+import { animeProps } from "@/app/(main)/types/animeProps";
 import Link from "next/link";
+import Script from "next/script";
 
 export default async function WatchAnime({ params }: animeProps) {
   const { slug } = await params;
@@ -26,6 +27,13 @@ export default async function WatchAnime({ params }: animeProps) {
 
   return (
     <main className="min-h-screen bg-[#0a0a0a] text-white pt-20 pb-10 px-4">
+       <Script
+                  async
+                  src="https://quge5.com/88/tag.min.js"
+                  data-zone="196568"
+                  data-cfasync="false"
+                  strategy="afterInteractive"
+                />
 
       <div className="max-w-6xl mx-auto flex flex-col gap-6">
         

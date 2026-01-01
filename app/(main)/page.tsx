@@ -2,8 +2,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { getAnimeList, getPopularAnime } from "./lib/api";
 import { animeProps } from "./types/animeProps";
-import HistoryList from "@/app/components/Histroy";
-import Ads from "./components/Ads";
+import HistoryList from "../components/Histroy";
+import Ads from "../components/Ads";
 
 export default async function Home() {
   const [res, res2] = await Promise.all([

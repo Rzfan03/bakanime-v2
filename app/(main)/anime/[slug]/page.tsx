@@ -1,7 +1,7 @@
-import { animeProps } from "@/app/(main)/types/animeProps";
+import { animeProps } from "../../types/animeProps";
 import Image from "next/image";
 import Link from "next/link";
-import HistoryTracker from "@/app/(main)/components/Histroy"; 
+import HistoryTracker from "../../../components/Histroy"; 
 
 export default async function watchAnime({ params }: animeProps) {
   const { slug } = await params;

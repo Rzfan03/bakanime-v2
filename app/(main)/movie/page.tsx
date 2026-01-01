@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { getMovieList } from "../lib/api";
 import { animeProps } from "../types/animeProps";
-import HistoryTracker from "../(main)/components/Histroy";
+import HistoryTracker from "../../components/Histroy";
 
 export default async function MoviePage({
   searchParams,

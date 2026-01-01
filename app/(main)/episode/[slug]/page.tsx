@@ -1,5 +1,5 @@
 
-import { animeProps } from "@/app/(main)/types/animeProps";
+import { animeProps } from "../../types/animeProps";
 import Link from "next/link";
 import Script from "next/script";
 
